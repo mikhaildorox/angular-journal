@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'; //импорт декоратора компонент
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+@Component({ //его настройки
+  selector: 'app-root', //назкание компонента для шаблона. использовать как тег в index.html
+  templateUrl: './app.component.html', //ссылка на шаблон
+  styleUrls: ['./app.component.scss'] //ссылка на стили
 })
 export class AppComponent {
-  title = 'angular-journal';
+  title = 'angular journal';
 }

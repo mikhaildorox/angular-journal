@@ -1,10 +1,10 @@
-import { NgModule } from '@angular/core';
+import { NgModule } from '@angular/core'; /* подключаю декоратор из ангуляр кор */
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-@NgModule({
+@NgModule({ //настройка приложения
   declarations: [
     AppComponent
   ],
@@ -13,6 +13,6 @@ import { AppComponent } from './app.component';
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent] //отсюда начинается приложение
 })
 export class AppModule { }
