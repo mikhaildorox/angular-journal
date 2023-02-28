@@ -1,5 +1,5 @@
 //описание объекта
-export interface ITask {
+export interface IProduct {
   id: number
   title:string
   price:number
