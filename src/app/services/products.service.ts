@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core'
 import {HttpClient, HttpErrorResponse, HttpParams} from "@angular/common/http";
-import {catchError, delay, Observable, throwError} from "rxjs";
+import {catchError, delay, Observable, retry, throwError} from "rxjs";
 import {IProduct} from "../models/product";
 import {ErrorService} from "./error.service";
 
@@ -22,7 +22,8 @@ export class ProductsService {
       params: new HttpParams().append('limit', 5) // ограничение количества элементов на странице
     }).pipe(
       delay(2000), // искуственно замедлю возвращение стрима
-      catchError(this.errorHandler) // отлавливаю ошибки
+      retry(2), // количество попыток переподключения
+      catchError(this.errorHandler.bind(this)) // отлавливаю ошибки
     )
   }
 
