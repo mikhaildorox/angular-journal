@@ -26,7 +26,8 @@ export class ProductsService {
     )
   }
 
-  private errorHandler(error: HttpErrorResponse) {
+  private errorHandler(error: HttpErrorResponse) { // класс, который работает с ошибками
+    this.errorService.handle(error.message)
     return throwError(() => error.message)
   }
 }
