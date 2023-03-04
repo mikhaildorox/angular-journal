@@ -9,4 +9,6 @@ import { IProduct } from 'src/app/models/product'
 //Новый класс нужно зарегистрировать в апп.модуле
 export class ProductComponent {
   @Input() product: IProduct//чтобы использовать автопараметры
+
+  details = false
 }
