@@ -17,6 +17,7 @@ export class AppComponent implements OnInit{
 
   loading = false // загрузка элементов на страницу
   products$: Observable<IProduct[]> //вместо создания списка сразу работаю со стримом
+  term =''
   constructor(private productsService: ProductsService) {
   }
   ngOnInit(): void {
