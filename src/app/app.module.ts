@@ -8,13 +8,17 @@ import {HttpClientModule} from "@angular/common/http";
 import { GlobalErrorComponent } from './components/global-error/global-error.component';
 import {FormsModule} from "@angular/forms";
 import { FilterProductsPipe } from './pipes/filter-products.pipe';
+import { ModalPipe } from './components/modal.pipe';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({ //настройка приложения
   declarations: [
     AppComponent,
     ProductComponent,
     GlobalErrorComponent,
-    FilterProductsPipe
+    FilterProductsPipe,
+    ModalPipe,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
